@@ -1,9 +1,11 @@
 import { GitHub } from "@mui/icons-material";
 import {
+  Alert,
   AppBar,
   Box,
   Button,
   IconButton,
+  Link,
   Toolbar,
   Typography,
 } from "@mui/material";
@@ -76,9 +78,21 @@ function App() {
       <Box m={2}>
         <Switch>
           <Route exact path={["/parse", "/parse/:vaa"]}>
+            <Alert variant="outlined" severity="info" sx={{ mb: 2 }}>
+              This functionality is now available on{" "}
+              <Link href="https://wormholescan.io/#/vaa-parser">
+                Wormhole Scan
+              </Link>
+            </Alert>
             <Decoder />
           </Route>
           <Route exact path={["/tx", "/tx/:hash"]}>
+            <Alert variant="outlined" severity="info" sx={{ mb: 2 }}>
+              This functionality is now available on{" "}
+              <Link href="https://wormholescan.io/#/vaa-parser">
+                Wormhole Scan
+              </Link>
+            </Alert>
             <Transaction />
           </Route>
           <Route exact path={["/ccq"]}>
